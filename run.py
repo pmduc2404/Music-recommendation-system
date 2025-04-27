@@ -11,8 +11,9 @@ from spotipy.oauth2 import SpotifyClientCredentials
 from emotion_video_classifier import emotion_testing
 import tkinter as tk
 from tkinter import messagebox
-
-client_credentials_manager = SpotifyClientCredentials(client_id=config.cid, client_secret=config.secret)
+client_id = "36370b872fe7468baced0087a9d5616e"
+secret = "690c15fd25be459f850882c85c4ee575"
+client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=secret)
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
 root = tk.Tk()
@@ -21,7 +22,7 @@ root.geometry("600x400")
 root.configure(bg='black')
 name1 = tk.StringVar()
 
-photo = PhotoImage(file="musicback.jpg")
+photo = PhotoImage(file=r"C:\Users\Admin\Desktop\Desktop\Music-recommendation-system\images\musicback.jpg")
 l = tk.Label(root, image=photo)
 l.image = photo  # just keeping a reference
 l.grid()
